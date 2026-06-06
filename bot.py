@@ -10,7 +10,9 @@ from telegram.ext import (
 
 from datetime import datetime
 import pytz
-
+import os
+TOKEN = os.getenv("BOT_TOKEN")
+app = Application.builder().token(TOKEN).build()
 # مراحل گفتگو
 TIME, COUNTRY = range(2)
 
